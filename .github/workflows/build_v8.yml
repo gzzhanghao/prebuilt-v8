@@ -57,7 +57,7 @@ jobs:
     strategy:
       matrix:
         config:
-          - os: windows-latest
+          - os: windows-2019
             name: windows
             architecture: x64
             library_name: v8_monolith.lib
@@ -87,8 +87,6 @@ jobs:
       - name: Install MSVC/MSBuild (Windows)
         if: runner.os == 'Windows'
         uses: microsoft/setup-msbuild@v1.1
-        with:
-          vs-version: '[16.4,16.5)'
 
       - name: Get Target V8 Version
         id: version
