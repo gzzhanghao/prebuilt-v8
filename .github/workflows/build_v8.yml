@@ -87,6 +87,8 @@ jobs:
       - name: Install MSVC/MSBuild (Windows)
         if: runner.os == 'Windows'
         uses: microsoft/setup-msbuild@v1.0.2
+        with:
+          vs-version: '[16,17)'
 
       - name: Get Target V8 Version
         id: version
